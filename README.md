@@ -27,9 +27,14 @@ This is a project that converts data for Darknet!
 7.Edit file obj.data in the directory darknet\, containing (where classes = number of objects):
 
 classes = 2
+
 train  = data/train.txt
+
 valid  = data/test.txt
+
 names = data/obj.names
+
 backup = backup/ 
+
 
 ![edit_custom](obj_data.jpg)
