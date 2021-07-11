@@ -18,4 +18,18 @@ This is a project that converts data for Darknet!
 
 ![run.bat2](run3.jpg)
 
-5.Downlad custom_data folder if you need.
+5.Download custom_data folder if you need.
+
+6.Edit file obj.names in the directory darknet\, with objects names - each in new line:
+
+![edit_custom](obj_names.jpg)
+
+7.Edit file obj.data in the directory darknet\, containing (where classes = number of objects):
+
+classes = 2
+train  = data/train.txt
+valid  = data/test.txt
+names = data/obj.names
+backup = backup/ 
+
+![edit_custom](obj_data.jpg)
