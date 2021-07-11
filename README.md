@@ -62,4 +62,4 @@ If you start prediction by using the command line:
 
 - darknet.exe detect custom_data/yolov4-tiny-custom.cfg custom_data/yolov4-tiny-custom_last.weights D:/93/407ETR_FC01_20140402_110333_00199.jpg
 
-![prediction](prediction.jpg)
+![prediction](prediction1.jpg)
