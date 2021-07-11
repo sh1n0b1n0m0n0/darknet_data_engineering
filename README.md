@@ -41,10 +41,14 @@ backup = backup/
 
 ![edit_custom](obj_data.jpg)
 
-8. Download pre-trained weights for the convolutional layers and put to the directory darknet\
+8. Open data\coco.names and edit labels:
+
+![edit_custom](coco_names.jpg)
+
+9. Download pre-trained weights for the convolutional layers and put to the directory darknet\
 - for yolov4-tiny.cfg, yolov4-tiny-3l.cfg, yolov4-tiny-custom.cfg (19 MB): [yolov4-tiny.conv.29](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.conv.29)
 
-9. Run **train.bat**:
+10. Run **train.bat**:
 
 If you start training by using the command line:
 
@@ -52,7 +56,7 @@ If you start training by using the command line:
 
 ![train](train1.jpg)
 
-10. Run for prediction **detection.bat**:
+11. Run for prediction **detection.bat**:
 
 If you start prediction by using the command line:
 
