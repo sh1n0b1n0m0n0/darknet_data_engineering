@@ -1,0 +1,5 @@
+classes= 1
+train  = D:/93/train/train.txt
+valid  = D:/93/test/test.txt
+names = C:/darknet-AlexyAB/custom_data/obj.names
+backup = C:/darknet-AlexyAB/custom_data
