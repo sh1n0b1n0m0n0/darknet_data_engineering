@@ -5,8 +5,8 @@ from train_test_split import root_dir
 print('Enter path to .pkl file:')
 path_to_plk1 = str(input())
 
-#path_to_plk1 = root_dir + '93.a.cache.pkl'
-#path_to_plk2 = root_dir + '93.b.cache.pkl'
+# path_to_plk1 = root_dir + '93.a.cache.pkl'
+# path_to_plk2 = root_dir + '93.b.cache.pkl'
 
 data = pickle.load(open(path_to_plk1, "rb"))
 
@@ -33,8 +33,8 @@ def take_cords(data):
 
 for img_name in contents:
     try:
-        img_name = img_name.replace(root_dir + 'train/','')
-        img_name = img_name.replace('\n','')
+        img_name = img_name.replace(root_dir + 'train/', '')
+        img_name = img_name.replace('\n', '')
         data_name = data[img_name]
 
         path = root_dir + img_name
@@ -44,19 +44,17 @@ for img_name in contents:
 
         x1, y1, x2, y2 = take_cords(data_name)
 
-
-        x_cent = ((x2 + x1)/2)/w
-        y_cent = ((y2 + y1)/2)/h
-        W = (x2-x1)/w
-        H = (y2-y1)/h
+        x_cent = ((x2 + x1) / 2) / w
+        y_cent = ((y2 + y1) / 2) / h
+        W = (x2 - x1) / w
+        H = (y2 - y1) / h
         # 0 - index if you have 1 label to detect
         indx = '0'
-        darknet_ann = indx+' '+str(x_cent)+' '+str(y_cent)+' '+str(W)+' '+str(H)
-        with open(root_dir + 'train/' + img_name.replace('.jpg','') + '.txt', 'w') as file:
+        darknet_ann = indx + ' ' + str(x_cent) + ' ' + str(y_cent) + ' ' + str(W) + ' ' + str(H)
+        with open(root_dir + 'train/' + img_name.replace('.jpg', '') + '.txt', 'w') as file:
             file.write('%s\n' % darknet_ann)
-    except(KeyError):
+    except KeyError:
         print('Image not found')
         pass
-
 
 print('All is DONE!')
